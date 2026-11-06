@@ -9,10 +9,14 @@
  <path id="o1" d="M-134 0a134 43 0 1 0 268 0a134 43 0 1 0-268 0"/>
  <path id="o2" d="M-67-116a134 43 60 1 0 134 232a134 43 60 1 0-134-232"/>
  <path id="o3" d="M-67 116a134 43-60 1 0 134-232a134 43-60 1 0-134 232"/>
+ <clipPath id="code-window"><rect x="575" y="76" width="280" height="112" rx="8"/></clipPath>
+ <linearGradient id="code-fade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="white" stop-opacity="0"/><stop offset=".22" stop-color="white"/><stop offset=".78" stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+ <mask id="code-mask"><rect x="575" y="76" width="280" height="112" fill="url(#code-fade)"/></mask>
  <style>
  .electron{offset-distance:0%;animation:orbit 9s linear infinite}.e1{offset-path:path('M-134 0a134 43 0 1 0 268 0a134 43 0 1 0-268 0')}.e2{offset-path:path('M-67-116a134 43 60 1 0 134 232a134 43 60 1 0-134-232');animation-delay:-3s}.e3{offset-path:path('M-67 116a134 43-60 1 0 134-232a134 43-60 1 0-134 232');animation-delay:-6s}
  @keyframes orbit{to{offset-distance:100%}} @keyframes wave{to{stroke-dashoffset:-160}}.wave{animation:wave 8s linear infinite}
- @media(prefers-reduced-motion:reduce){.electron,.wave{animation:none}.e2{offset-distance:33%}.e3{offset-distance:66%}}
+ @keyframes codefall{from{transform:translateY(-120px)}to{transform:translateY(0)}}.codefall{animation:codefall 14s linear infinite}
+ @media(prefers-reduced-motion:reduce){.electron,.wave,.codefall{animation:none}.e2{offset-distance:33%}.e3{offset-distance:66%}}
  </style>
 </defs>
 <rect width="1280" height="360" rx="20" fill="url(#bg)"/>
@@ -21,7 +25,22 @@
 <g font-family="Consolas,monospace" font-size="14" fill="#7795bb" opacity=".52">
  <text x="56" y="59">&lt;discovery&gt;</text><text x="72" y="84">while curiosity:</text><text x="90" y="109">explore(code, science)</text>
  <text x="55" y="296">&lt;/discovery&gt;</text>
- <text x="716" y="58">iℏ ∂ψ/∂t = Ĥψ</text><text x="1100" y="310">E = hν</text>
+ <text x="716" y="58">iℏ ∂ψ/∂t = Ĥψ</text>
+</g>
+<text x="1040" y="346" text-anchor="middle" font-family="Consolas,monospace" font-size="14" fill="#a6bbd7">E = hν</text>
+<g clip-path="url(#code-window)" mask="url(#code-mask)" font-family="Consolas,monospace" font-size="13" fill="#62b9c6" opacity=".55">
+ <g class="codefall">
+  <text x="590" y="94">import numpy as np</text>
+  <text x="590" y="118">ψ = solve(H, grid)</text>
+  <text x="590" y="142">for step in simulation:</text>
+  <text x="606" y="166">energy = H @ ψ</text>
+  <text x="606" y="190">yield discover(energy)</text>
+  <text x="590" y="214">import numpy as np</text>
+  <text x="590" y="238">ψ = solve(H, grid)</text>
+  <text x="590" y="262">for step in simulation:</text>
+  <text x="606" y="286">energy = H @ ψ</text>
+  <text x="606" y="310">yield discover(energy)</text>
+ </g>
 </g>
 <g font-family="Segoe UI,Arial,sans-serif">
  <rect x="56" y="139" width="38" height="3" rx="1.5" fill="#5eead4"/>
