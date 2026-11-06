@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+<title id="title">Ariz Muradov — Code · Science · Discovery</title>
+<desc id="desc">Dark scientific banner with code, equations, a moving wave and electrons orbiting a stylized atom.</desc>
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#080f20"/><stop offset=".55" stop-color="#101a32"/><stop offset="1" stop-color="#17102c"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#2dd4bf" stop-opacity=".16"/><stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/></radialGradient>
+ <linearGradient id="line"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+ <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#8aa5cf" stroke-opacity=".055"/></pattern>
+ <path id="o1" d="M-134 0a134 43 0 1 0 268 0a134 43 0 1 0-268 0"/>
+ <path id="o2" d="M-67-116a134 43 60 1 0 134 232a134 43 60 1 0-134-232"/>
+ <path id="o3" d="M-67 116a134 43-60 1 0 134-232a134 43-60 1 0-134 232"/>
+ <style>
+ .electron{offset-distance:0%;animation:orbit 9s linear infinite}.e1{offset-path:path('M-134 0a134 43 0 1 0 268 0a134 43 0 1 0-268 0')}.e2{offset-path:path('M-67-116a134 43 60 1 0 134 232a134 43 60 1 0-134-232');animation-delay:-3s}.e3{offset-path:path('M-67 116a134 43-60 1 0 134-232a134 43-60 1 0-134 232');animation-delay:-6s}
+ @keyframes orbit{to{offset-distance:100%}} @keyframes wave{to{stroke-dashoffset:-160}}.wave{animation:wave 8s linear infinite}
+ @media(prefers-reduced-motion:reduce){.electron,.wave{animation:none}.e2{offset-distance:33%}.e3{offset-distance:66%}}
+ </style>
+</defs>
+<rect width="1280" height="360" rx="20" fill="url(#bg)"/>
+<rect width="1280" height="360" rx="20" fill="url(#grid)"/>
+<circle cx="1040" cy="180" r="240" fill="url(#halo)"/>
+<g font-family="Consolas,monospace" font-size="14" fill="#7795bb" opacity=".52">
+ <text x="56" y="59">&lt;discovery&gt;</text><text x="72" y="84">while curiosity:</text><text x="90" y="109">explore(code, science)</text>
+ <text x="55" y="296">&lt;/discovery&gt;</text>
+ <text x="716" y="58">iℏ ∂ψ/∂t = Ĥψ</text><text x="1100" y="310">E = hν</text>
+</g>
+<g font-family="Segoe UI,Arial,sans-serif">
+ <rect x="56" y="139" width="38" height="3" rx="1.5" fill="#5eead4"/>
+ <text x="56" y="204" font-size="58" font-weight="700" letter-spacing="-1.8" fill="#f0f6ff">Ariz Muradov</text>
+ <text x="59" y="245" font-size="17" letter-spacing="4" fill="#a6bbd7">CODE · SCIENCE · DISCOVERY</text>
+</g>
+<path d="M650 236 Q674 236 685 214T709 236T733 258T757 236T781 214T805 236T829 258T853 236" fill="none" stroke="#3b617c" stroke-width="1.5"/>
+<path class="wave" d="M650 236 Q674 236 685 214T709 236T733 258T757 236T781 214T805 236T829 258T853 236" fill="none" stroke="#5eead4" stroke-width="2" stroke-dasharray="26 134"/>
+<g transform="translate(1040 177)">
+ <circle r="149" fill="none" stroke="#263d57" stroke-dasharray="2 9"/>
+ <g fill="none" stroke="url(#line)" stroke-width="1.5" opacity=".7"><use href="#o1"/><use href="#o2"/><use href="#o3"/></g>
+ <circle r="19" fill="#5eead4" opacity=".08"/><circle r="10" fill="#5eead4" opacity=".16"/><circle r="5" fill="#b9fff3"/>
+ <g fill="#7ee9ed"><circle class="electron e1" r="5"/><circle class="electron e2" r="5"/><circle class="electron e3" r="5"/></g>
+</g>
+<path d="M56 333H1224" stroke="url(#line)" stroke-opacity=".3"/>
+</svg>
